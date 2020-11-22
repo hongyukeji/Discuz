@@ -76,7 +76,7 @@ function validate(theform) {
 		showError('抱歉，您尚未输入标题或内容');
 		return false;
 	} else if(mb_strlen(theform.subject.value) > 80) {
-		showError('您的标题超过 80 个字符的限制');
+		showError('您的标题超过 255 个字符的限制');
 		return false;
 	}
 	if(in_array($('postsubmit').name, ['topicsubmit', 'editsubmit'])) {

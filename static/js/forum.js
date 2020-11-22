@@ -239,7 +239,7 @@ function fastpostvalidate(theform, noajaxpost) {
 		s = '抱歉，您尚未输入标题或内容';
 		theform.message.focus();
 	} else if(mb_strlen(theform.subject.value) > 80) {
-		s = '您的标题超过 80 个字符的限制';
+		s = '您的标题超过 255 个字符的限制';
 		theform.subject.focus();
 	}
 	if(!disablepostctrl && ((postminchars != 0 && mb_strlen(theform.message.value) < postminchars) || (postmaxchars != 0 && mb_strlen(theform.message.value) > postmaxchars))) {
