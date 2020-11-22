@@ -17,7 +17,7 @@ var fid = parseInt('$_G[fid]');
 			<div class="pbt cl">
 				<!--{if $_G['forum'][threadtypes][types]}-->
 					<div class="ftid">
-						<select name="typeid" id="typeid_fast" width="255">
+						<select name="typeid" id="typeid_fast" width="80">
 						<option value="0" selected="selected">{lang select_thread_catgory}</option>
 						<!--{loop $_G['forum'][threadtypes][types] $typeid $name}-->
 							<!--{if empty($_G['forum']['threadtypes']['moderators'][$typeid]) || $_G['forum']['ismoderator']}-->
@@ -47,7 +47,7 @@ var fid = parseInt('$_G[fid]');
 						</div>
 						<div class="area">
 							<!--{if $allowfastpost}-->
-								<textarea rows="6" cols="255" name="message" id="fastpostmessage" onKeyDown="seditor_ctlent(event, '$(\'fastpostsubmit\').click()');" tabindex="12" class="pt"{eval echo getreplybg($_G['forum']['replybg']);}></textarea>
+								<textarea rows="6" cols="80" name="message" id="fastpostmessage" onKeyDown="seditor_ctlent(event, '$(\'fastpostsubmit\').click()');" tabindex="12" class="pt"{eval echo getreplybg($_G['forum']['replybg']);}></textarea>
 							<!--{else}-->
 								<div class="pt hm">
 									<!--{if !$_G['uid']}-->
