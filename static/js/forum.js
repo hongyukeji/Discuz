@@ -238,7 +238,7 @@ function fastpostvalidate(theform, noajaxpost) {
 	if(theform.message.value == '' || theform.subject.value == '') {
 		s = '抱歉，您尚未输入标题或内容';
 		theform.message.focus();
-	} else if(mb_strlen(theform.subject.value) > 80) {
+	} else if(mb_strlen(theform.subject.value) > 255) {
 		s = '您的标题超过 255 个字符的限制';
 		theform.subject.focus();
 	}
